@@ -1,2 +1,3 @@
 # golem-public
-Öffentliche Dokumente für meine Artikel bei golem.de
+
+Öffentlich zugängliche Dateien für meine Artikel bei golem.de
