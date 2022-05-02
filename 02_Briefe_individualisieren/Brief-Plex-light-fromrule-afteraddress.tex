@@ -1,0 +1,32 @@
+%!TEX TS-program = lualatex
+\documentclass[12pt,parskip=half,fromrule=afteraddress]{scrlttr2}
+\usepackage[ngerman]{babel}
+\usepackage{blindtext}
+
+\setkomavar{fromname}{Max Mustermann}
+\setkomavar{fromaddress}{Musterweg 1, 12346 Musterstadt}
+\setkomavar{yourref}{FA2021/20897-1}
+\setkomavar{yourmail}{01.12.2021}
+\setkomavar{subject}{Übersendung von Unterlagen}
+\setkomavar{myref}[Steuernummer]{20897}
+
+\usepackage[usefilenames,RMstyle=Light,SSstyle=Light,TTstyle=Light,DefaultFeatures={Ligatures=Common}]{plex-otf} 
+\renewcommand*\familydefault{\sfdefault}
+
+\begin{document}
+\begin{letter}{Finanzamt Musterstadt \\ Musterweg 1 \\ 12345 Musterstadt}
+\opening{Sehr geehrte Damen und Herren,}
+
+beiliegend erhalten Sie die angeforderten Unterlagen.
+
+\blindtext
+
+\blindtext
+
+\blindtext
+
+\closing{Mit freundlichen Grüßen,}
+\encl{Verdienstbescheinigung 2020 \\ Anlage A38}
+
+\end{letter}
+\end{document}

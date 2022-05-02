@@ -1,0 +1,50 @@
+%!TEX TS-program = lualatex
+\documentclass[12pt,parskip=half]{scrlttr2}
+\usepackage[ngerman]{babel}
+\usepackage{blindtext}
+\usepackage{tabularray}
+
+\setkomavar{fromname}{Max Mustermann}
+\setkomavar{fromaddress}{Musterweg 1, 12346 Musterstadt}
+\setkomavar{yourref}{FA2021/20897-1}
+\setkomavar{yourmail}{01.12.2021}
+\setkomavar{subject}{Übersendung von Unterlagen}
+\setkomavar{myref}[Steuernummer]{20897}
+
+\usepackage[usefilenames,RMstyle=Light,SSstyle=Light,TTstyle=Light,DefaultFeatures={Ligatures=Common}]{plex-otf} 
+\renewcommand*\familydefault{\sfdefault}
+
+\pagestyle{myheadings}
+\setplength{firstfootvpos}{27.5cm}
+
+\setkomavar{firsthead}{\usekomavar{fromname}}
+\setkomavar{firstfoot}{%
+\begin{tblr}{|Q[l,b,0.33\textwidth]|Q[c,t,0.33\textwidth]|Q[r,b,0.33\textwidth]|}
+\hline
+ {IBAN: DE1234567890 \\ BIC: INGDEFFXX} &  & {max@mustermann.de \\ www.maxmustermann.de} \\
+\hline
+\end{tblr}
+}
+
+\setkomavar{nexthead}{\usekomavar{fromname}\hfill\today}
+\setkomavar{nextfoot}{\thepage/\letterlastpage}
+
+\begin{document}
+\begin{letter}{Finanzamt Musterstadt \\ Musterweg 1 \\ 12345 Musterstadt}
+\opening{Sehr geehrte Damen und Herren,}
+
+beiliegend erhalten Sie die angeforderten Unterlagen.
+
+\blindtext
+
+\blindtext
+
+\blindtext
+
+\closing{Mit freundlichen Grüßen,}
+\encl{Verdienstbescheinigung 2020 \\ Anlage A38}
+
+\end{letter}
+\end{document}
+
+https://tex.stackexchange.com/questions/12703/how-to-create-fixed-width-table-columns-with-text-raggedright-centered-raggedlef
