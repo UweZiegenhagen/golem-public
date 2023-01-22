@@ -42,7 +42,7 @@ def tilgungsplan(kreditsumme, zinssatz, tilgung, monate):
 
 #Beispiel mit S=250K, 2,5% Zins und 5% Tilgung
 df1 = tilgungsplan(250000, 0.01, 0.05, 500)
-df2 = tilgungsplan(250000, 0.04, 0.05, 500)
+df2 = tilgungsplan(205000, 0.04, 0.05, 500)
 
 zins1 = round(df1["Zinsen"].sum(),2)
 zins2 = round(df2["Zinsen"].sum(),2)
