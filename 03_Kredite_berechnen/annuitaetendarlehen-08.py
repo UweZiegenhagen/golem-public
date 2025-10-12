@@ -41,8 +41,8 @@ def tilgungsplan(kreditsumme, zinssatz, tilgung, monate):
 
 
 #Beispiel mit S=250K, 2,5% Zins und 5% Tilgung
-df1 = tilgungsplan(250000, 0.01, 0.05, 500)
-df2 = tilgungsplan(205000, 0.04, 0.05, 500)
+df1 = tilgungsplan(600000, 0.04, 0.04, 500)
+df2 = tilgungsplan(600000, 0.03, 0.04, 500)
 
 zins1 = round(df1["Zinsen"].sum(),2)
 zins2 = round(df2["Zinsen"].sum(),2)
@@ -66,7 +66,8 @@ print( f'{ratensumme2} EUR Gesamtkosten\n')
 print(f'Verhältnis der Gesamtkosten: {round(ratensumme2/ratensumme1,2)}\n')
 
 
-
 #print(df) # Ausgabe am Bildschirm
-#df.to_excel('annuitaetendarlehen-04.xlsx')
-#df.to_html('annuitaetendarlehen-04.html', float_format='%10.2f')
+df1.to_excel('annuitaetendarlehen-01.xlsx')
+df2.to_excel('annuitaetendarlehen-02.xlsx')
+
+#df2.to_html('annuitaetendarlehen-04.html', float_format='%10.2f')
